@@ -42,7 +42,7 @@
               "node_modules/ng-zorro-antd/graph/style/index.min.css",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/main/webapp/content/scss/vendor.scss",
-              "src/main/webapp/content/scss/global.scss",
+              "src/main/webapp/content/scss/global.scss"
             ],
 
             "scripts": []

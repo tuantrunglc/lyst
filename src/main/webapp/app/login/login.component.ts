@@ -95,22 +95,26 @@ export default class LoginComponent implements OnInit, AfterViewInit {
 
   submitForm(): void {
     if (this.loginForm.valid) {
-      // console.log('submit', this.loginForm.value);
+      console.log('Login form submitted:', this.loginForm.value);
       this.loginService.login(this.loginForm.getRawValue()).subscribe({
-        next: () => {
+        next: (account) => {
+          console.log('Login successful, account:', account);
           this.authenticationError = false;
-          if (!this.router.getCurrentNavigation()) {
-            // There were no routing during login (eg from navigationToStoredUrl)
-            this.router.navigate(['']);
-          }
-
+          
           this.notification.create('success', 'Login successful', '', {
             nzStyle: {
               textAlign: 'left'
             },
           });
+
+          // Navigate to home page
+          console.log('Navigating to home page...');
+          this.router.navigate(['/']).then(success => {
+            console.log('Navigation result:', success);
+          });
         },
         error: (err) => {
+          console.error('Login error:', err);
           this.authenticationError = true;
           this.processError(err);
         },

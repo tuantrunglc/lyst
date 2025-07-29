@@ -27,6 +27,23 @@
     </div>
   </section>
   <section class="info">
+    <!-- Test Account Info -->
+    <div class="alert alert-info mb-3" style="background-color: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; padding: 10px; border-radius: 5px;">
+      <h6><strong>🧪 Test Accounts (Mock Mode)</strong></h6>
+      <div class="row">
+        <div class="col-6">
+          <strong>Admin:</strong><br>
+          Phone: 0123456789<br>
+          Password: admin123
+        </div>
+        <div class="col-6">
+          <strong>User:</strong><br>
+          Phone: 0987654321<br>
+          Password: user123
+        </div>
+      </div>
+    </div>
+    
     <form nz-form [formGroup]="loginForm" (ngSubmit)="submitForm()">
       <nz-form-item class="mb-4">
         <nz-form-control style="text-align: left"  [nzSm]="24" [nzXs]="24" nzErrorTip="Please input your phone number!">
