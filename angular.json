@@ -49,6 +49,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/lyst/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,

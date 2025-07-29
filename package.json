@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "npm run webapp:prod --",
+    "build:github-pages": "npm run clean-www && ng build --configuration production --base-href /lyst/",
     "build-watch": "concurrently 'npm run webapp:build:dev -- --watch'",
     "ci:frontend:build": "npm run webapp:build:$npm_package_config_default_environment",
     "ci:frontend:test": "npm run ci:frontend:build && npm test",
